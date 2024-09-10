@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadrunner Speed Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://img.freepik.com/free-vector/speed-motion-background-with-fast-speedometer-car-racing-velocity-background_60438-2048.jpg'); /* Replace 'your-background-image.jpg' with your image file path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #760606;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            font-weight: bold;
+            font-size: 50px;
+            color: #446a06;
+            margin-top: 40px;
+        }
+        p {
+             background-color: #14eeeee1;
+             font-style: #f40606;
+             padding: 10px 20px;
+             border: none;
+             border-radius: 5px;
+             cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>...(Roadrunner Speed Predictor)...</h1>
+    <form method="POST" action="/">
+        <label for="terrain">Terrain:</label>
+        <select id="terrain" name="terrain">
+            <option value="Desert">Desert</option>
+            <option value="Forest">Forest</option>
+            <option value="Mountain">Mountain</option>
+        </select><br><br>
+
+        <label for="weather">Weather Conditions:</label>
+        <select id="weather" name="weather">
+            <option value="Sunny">Sunny</option>
+            <option value="Cloudy">Cloudy</option>
+            <option value="Rainy">Rainy</option>
+            <option value="Windy">Windy</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict Speed">
+    </form>
+
+    {% if predicted_speed is not none %}
+    <div id="result">
+        <p>Predicted Roadrunner Speed: {{ predicted_speed }} mph</p>
+    </div>
+    {% endif %}
+    <p><a href="/">Back to Prediction</a></p>
+    <p>...Safe driving saves life...</p>
+</body>
+</html>

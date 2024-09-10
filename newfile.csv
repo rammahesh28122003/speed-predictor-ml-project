@@ -1,0 +1,13 @@
+Terrain,Weather,Speed
+Desert,Sunny,80
+Desert,Cloudy,85
+Desert,Rainy,75
+Desert,Windy,78
+Forest,Sunny,90
+Forest,Cloudy,92
+Forest,Rainy,88
+Forest,Windy,86
+Mountain,Sunny,75
+Mountain,Cloudy,78
+Mountain,Rainy,72
+Mountain,Windy,70
